@@ -23,6 +23,9 @@ team = 'knights'  # Change this to switch teams
 # Insert date (or what you want the top right to show)
 date = 'Beavers Season'
 
+# League average cache file
+league_cache_file = "kde_cache.npz"
+
 # Insert sb/attempt data
 sb_att_dict = {
     # "Catcher Name": (Steals, Attempts),
@@ -603,7 +606,7 @@ def generate_pptx_from_catchers_template_with_cache(df, league_cache):
     export_each_catcher_slide_to_pdf(output_file, pdf_folder_individual, catchers, safe_date)
 
 # Load the pre-computed KDE cache
-cache_file = "kde_cache.npz"
+cache_file = league_cache_file
 league_cache = load_kde_cache(cache_file)
 
 if league_cache is None:
