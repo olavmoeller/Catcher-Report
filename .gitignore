@@ -13,6 +13,9 @@ output/
 # Unnecessary files
 unnecessary/
 
+# Cache files
+*.npz
+
 # Python cache files
 __pycache__/
 *.py[cod]
